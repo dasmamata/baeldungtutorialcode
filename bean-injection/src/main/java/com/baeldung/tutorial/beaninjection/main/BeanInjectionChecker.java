@@ -18,7 +18,7 @@ public class BeanInjectionChecker {
 
 	public void showUser() {
 		LOGGER.info(profile.getCredentials().getUserName());
-		LOGGER.info("City : " + profile.getDemoGraphic().getCity() + " State : " + profile.getDemoGraphic().getState()
-				+ " ZipCode : " + profile.getDemoGraphic().getZipCode());
+		LOGGER.info("City : " + profile.getDemographic().getCity() + " State : " + profile.getDemographic().getState()
+				+ " ZipCode : " + profile.getDemographic().getZipCode());
 	}
 }

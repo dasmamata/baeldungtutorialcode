@@ -3,7 +3,7 @@ package com.baeldung.tutorial.beaninjection.beans;
 public class UserProfile {
 
 	private UserCredentials credentials;
-	private DemoGraphic demoGraphic;
+	private Demographic demoGraphic;
 
 	public UserProfile(UserCredentials creds) {
 		setCredentials(creds);
@@ -17,11 +17,11 @@ public class UserProfile {
 		this.credentials = credentials;
 	}
 
-	public DemoGraphic getDemoGraphic() {
+	public Demographic getDemographic() {
 		return demoGraphic;
 	}
 
-	public void setDemoGraphic(DemoGraphic demoGraphic) {
+	public void setDemographic(Demographic demoGraphic) {
 		this.demoGraphic = demoGraphic;
 	}
 

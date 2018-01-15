@@ -14,7 +14,7 @@
     <bean id="userProfile"
         class="com.baeldung.tutorial.beaninjection.beans.UserProfile">
 		<constructor-arg index="0" ref="credentials"/>
-        <property name="demoGraphic" ref="demoGraphic"/>
+        <property name="demographic" ref="demographic"/>
     </bean>
 
     <bean id="credentials"
@@ -22,8 +22,8 @@
         <property name="userName" value="${userName}"/>
     </bean>
 
-    <bean id="demoGraphic"
-        class="com.baeldung.tutorial.beaninjection.beans.DemoGraphic">
+    <bean id="demographic"
+        class="com.baeldung.tutorial.beaninjection.beans.Demographic">
 		<constructor-arg index="0" value="${city}"/>
         <constructor-arg index="1" value="${state}"/>
         <constructor-arg index="2" value="${pin}"/>

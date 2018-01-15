@@ -1,12 +1,12 @@
 package com.baeldung.tutorial.beaninjection.beans;
 
-public class DemoGraphic {
+public class Demographic {
 	
 	private String city;
 	private String state;
 	private Integer zipCode;
 
-	public DemoGraphic(String ct, String st, String zip) {
+	public Demographic(String ct, String st, String zip) {
 		state = st;
 		city = ct;
 		zipCode = Integer.parseInt(zip);

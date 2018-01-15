@@ -9,7 +9,7 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.annotation.PropertySources;
 import org.springframework.core.env.Environment;
 
-import com.baeldung.tutorial.beaninjection.beans.DemoGraphic;
+import com.baeldung.tutorial.beaninjection.beans.Demographic;
 import com.baeldung.tutorial.beaninjection.beans.UserCredentials;
 import com.baeldung.tutorial.beaninjection.beans.UserProfile;
 
@@ -23,16 +23,16 @@ public class BeanInjectionConfig {
 	private Environment environment;
 
 	@Bean
-	DemoGraphic demoGraphic() {
+	Demographic demographic() {
 		String city = environment.getProperty("city");
 		String state = environment.getProperty("state");
 		String zip = environment.getProperty("pin");
-		return new DemoGraphic(city, state, zip);
+		return new Demographic(city, state, zip);
 	}
 	@Bean
 	UserProfile userProfile() {
 		UserProfile profile = new UserProfile(credentials());
-		profile.setDemoGraphic(demoGraphic());
+		profile.setDemographic(demographic());
 		return profile;
 	}
 

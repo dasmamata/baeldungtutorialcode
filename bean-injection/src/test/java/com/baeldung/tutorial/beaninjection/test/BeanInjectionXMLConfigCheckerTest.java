@@ -19,7 +19,7 @@ import com.baeldung.tutorial.beaninjection.main.BeanInjectionChecker;
 public class BeanInjectionXMLConfigCheckerTest {
 
     @Test
-    public final void testShowUserXML() {
+    public final void givenUserInfo_whenInjectedFromXML_thenShowUser() {
         ApplicationContext context = new ClassPathXmlApplicationContext("app-config.xml");
         BeanInjectionChecker checker = context.getBean(BeanInjectionChecker.class);
         checker.showUser();

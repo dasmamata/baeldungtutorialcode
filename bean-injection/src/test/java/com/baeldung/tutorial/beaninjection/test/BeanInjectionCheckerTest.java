@@ -21,7 +21,7 @@ public class BeanInjectionCheckerTest {
     private BeanInjectionChecker checker;
 
     @Test
-    public final void testShowUser() {
+    public final void givenUserInfo_whenInjectedFromCode_thenShowUser() {
         checker.showUser();
         assertTrue(true);
     }

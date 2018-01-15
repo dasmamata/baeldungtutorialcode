@@ -8,13 +8,13 @@
     http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 
 	<context:annotation-config/>
-    <context:property-placeholder location="classpath:userProfile.properties" />
+    <context:property-placeholder location="classpath:userProfileXML.properties" />
     <context:component-scan base-package="com.baeldung.tutorial.beaninjection.*" />
 	
     <bean id="userProfile"
         class="com.baeldung.tutorial.beaninjection.beans.UserProfile">
 		<constructor-arg index="0" ref="credentials"/>
-        <constructor-arg index="1" ref="demoGraphic"/>
+        <property name="demoGraphic" ref="demoGraphic"/>
     </bean>
 
     <bean id="credentials"

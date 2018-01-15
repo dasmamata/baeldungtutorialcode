@@ -31,7 +31,9 @@ public class BeanInjectionConfig {
 	}
 	@Bean
 	UserProfile userProfile() {
-		return new UserProfile(credentials(),demoGraphic());
+		UserProfile profile = new UserProfile(credentials());
+		profile.setDemoGraphic(demoGraphic());
+		return profile;
 	}
 
 	@Bean

@@ -5,9 +5,8 @@ public class UserProfile {
 	private UserCredentials credentials;
 	private DemoGraphic demoGraphic;
 
-	public UserProfile(UserCredentials creds, DemoGraphic demo) {
+	public UserProfile(UserCredentials creds) {
 		setCredentials(creds);
-		setDemoGraphic(demo);
 	}
 
 	public UserCredentials getCredentials() {

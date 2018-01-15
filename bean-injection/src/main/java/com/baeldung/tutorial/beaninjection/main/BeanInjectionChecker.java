@@ -11,14 +11,19 @@ import com.baeldung.tutorial.beaninjection.config.BeanInjectionConfig;
 @Component
 public class BeanInjectionChecker {
 
-	@Autowired
-	private UserProfile profile;
+    @Autowired
+    private UserProfile profile;
 
-	private static final Logger LOGGER = LoggerFactory.getLogger(BeanInjectionConfig.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(BeanInjectionConfig.class);
 
-	public void showUser() {
-		LOGGER.info(profile.getCredentials().getUserName());
-		LOGGER.info("City : " + profile.getDemographic().getCity() + " State : " + profile.getDemographic().getState()
-				+ " ZipCode : " + profile.getDemographic().getZipCode());
-	}
+    public void showUser() {
+        LOGGER.info(profile.getCredentials()
+            .getUserName());
+        LOGGER.info("City : " + profile.getDemographic()
+            .getCity() + " State : "
+            + profile.getDemographic()
+                .getState()
+            + " ZipCode : " + profile.getDemographic()
+                .getZipCode());
+    }
 }

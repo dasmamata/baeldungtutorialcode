@@ -15,15 +15,15 @@ import com.baeldung.tutorial.beaninjection.main.BeanInjectionChecker;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = { BeanInjectionConfig.class })
-@ActiveProfiles(profiles= {"xmlconfig"})
+@ActiveProfiles(profiles = { "xmlconfig" })
 public class BeanInjectionXMLConfigCheckerTest {
 
-	@Test
-	public final void testShowUserXML() {
-		ApplicationContext context = new ClassPathXmlApplicationContext("app-config.xml");
-		BeanInjectionChecker checker = context.getBean(BeanInjectionChecker.class);
-		checker.showUser();
-		assertTrue(true);
-	}
+    @Test
+    public final void testShowUserXML() {
+        ApplicationContext context = new ClassPathXmlApplicationContext("app-config.xml");
+        BeanInjectionChecker checker = context.getBean(BeanInjectionChecker.class);
+        checker.showUser();
+        assertTrue(true);
+    }
 
 }

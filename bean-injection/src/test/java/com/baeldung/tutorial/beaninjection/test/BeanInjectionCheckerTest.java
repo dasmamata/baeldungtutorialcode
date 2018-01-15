@@ -12,18 +12,18 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import com.baeldung.tutorial.beaninjection.config.BeanInjectionConfig;
 import com.baeldung.tutorial.beaninjection.main.BeanInjectionChecker;
 
-@RunWith(SpringJUnit4ClassRunner.class) 
-@ContextConfiguration(classes= {BeanInjectionConfig.class})
-@ActiveProfiles(profiles= {"beansconfig"})
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(classes = { BeanInjectionConfig.class })
+@ActiveProfiles(profiles = { "beansconfig" })
 public class BeanInjectionCheckerTest {
-	
-	@Autowired
-	private BeanInjectionChecker checker;
 
-	@Test
-	public final void testShowUser() {
-		checker.showUser();
-		assertTrue(true);
-	}
+    @Autowired
+    private BeanInjectionChecker checker;
+
+    @Test
+    public final void testShowUser() {
+        checker.showUser();
+        assertTrue(true);
+    }
 
 }
